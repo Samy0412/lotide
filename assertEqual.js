@@ -12,7 +12,7 @@ const assertEqual = function (actual, expected) {
     if (typeof actual === "string") {
       console.log(mad + `Assertion Failed: '${actual}' !== '${expected}' `);
     } else {
-      console.log(`Assertion Failed: ${actual} !== ${expected}`);
+      console.log(mad + `Assertion Failed: ${actual} !== ${expected}`);
     }
   }
 };
