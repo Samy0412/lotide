@@ -1,18 +1,27 @@
 // FUNCTION IMPLEMENTATION
-const mad = String.fromCodePoint(0x1f621);
+const pass = String.fromCodePoint(0x2705);
+const fail = String.fromCodePoint(0x274c);
 
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     if (typeof actual === "string") {
-      console.log(`Assertion Passed: '${actual}' === '${expected}'`);
+      console.log(
+        pass + pass + pass + `Assertion Passed: '${actual}' === '${expected}'`
+      );
     } else {
-      console.log(`Assertion Passed: ${actual} === ${expected}`);
+      console.log(
+        pass + pass + pass + `Assertion Passed: ${actual} === ${expected}`
+      );
     }
   } else if (actual !== expected) {
     if (typeof actual === "string") {
-      console.log(mad + `Assertion Failed: '${actual}' !== '${expected}' `);
+      console.log(
+        fail + fail + fail + `Assertion Failed: '${actual}' !== '${expected}' `
+      );
     } else {
-      console.log(mad + `Assertion Failed: ${actual} !== ${expected}`);
+      console.log(
+        fail + fail + fail + `Assertion Failed: ${actual} !== ${expected}`
+      );
     }
   }
 };
