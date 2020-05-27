@@ -36,7 +36,7 @@ const countOnly = function (allItems, itemsToCount) {
   for (const item of allItems) {
     //   //console.log(item);
 
-    if (Object.keys(itemsToCount).includes(item) && itemsToCount[item]) {
+    if (itemsToCount[item]) {
       if (instances[item]) {
         instances[item] += 1;
       } else {
@@ -60,12 +60,11 @@ const firstNames = [
   "Fang",
   "Joe",
 ];
-console.log(countOnly(firstNames));
+//console.log(countOnly(firstNames, {}));
 const result1 = countOnly(firstNames, {
   Jason: true,
   Karima: true,
   Fang: true,
-  Jeremy: true,
 });
 
 assertEqual(result1["Jason"], 1);
