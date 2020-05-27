@@ -1,8 +1,8 @@
 // FUNCTION IMPLEMENTATION
-const pass = String.fromCodePoint(0x2705);
-const fail = String.fromCodePoint(0x274c);
 
 const assertEqual = function (actual, expected) {
+  const pass = String.fromCodePoint(0x2705);
+  const fail = String.fromCodePoint(0x274c);
   if (actual === expected) {
     if (typeof actual === "string") {
       console.log(

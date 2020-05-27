@@ -1,7 +1,6 @@
-const pass = String.fromCodePoint(0x2705);
-const fail = String.fromCodePoint(0x274c);
-
 const assertArraysEqual = function (array1, array2) {
+  const pass = String.fromCodePoint(0x2705);
+  const fail = String.fromCodePoint(0x274c);
   let value = false;
   if (array1.length !== array2.length) {
     value = false;
