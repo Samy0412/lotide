@@ -30,12 +30,14 @@ const countLetters = function (string) {
   const instances = {};
 
   //loop through the entire allItem list
-  for (let i = 0; i < string.length; i++) {
+  for (let letter of string) {
     //console.log(item);
-    if (instances[string[i]]) {
-      instances[string[i]] += 1;
-    } else {
-      instances[string[i]] = 1;
+    if (letter !== " ") {
+      if (instances[letter]) {
+        instances[letter] += 1;
+      } else {
+        instances[letter] = 1;
+      }
     }
   }
 
@@ -43,7 +45,7 @@ const countLetters = function (string) {
 };
 
 //TEST CODE
-result = countLetters("papagateau");
+result = countLetters("lighthouse in the house");
 console.log(result);
 assertEqual(result["a"], 4);
 assertEqual(result["p"], 2);
