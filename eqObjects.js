@@ -46,24 +46,17 @@ const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
-  //check if value of a key in one object is = to value of that same key in the other object
   //loop through the keys of object 1
-  for (const key1 of Object.keys(object1)) {
-    //loop through the keys of object 2
-    //for (const key2 of Object.keys(object2)) {
-    //if key of object1 = key of object2
-    //if (key1 === key2) {
+  for (const key of Object.keys(object1)) {
     //check if it is an array or not
-    if (Array.isArray(object1[key1]) && Array.isArray(object2[key1])) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       // check if value of each keys are equal
-      if (eqArrays(object1[key1], object2[key1]) === false) {
+      if (eqArrays(object1[key], object2[key]) === false) {
         return false;
       }
-    } else if (object1[key1] !== object2[key1]) {
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
-    //}
-    //}
   }
   return true;
 };
@@ -72,7 +65,7 @@ const eqObjects = function (object1, object2) {
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-const bc = { b: "2", c: "3" };
+
 assertEqual(eqObjects(ab, ba), true);
 //console.log(eqObjects(ab, ba));
 
