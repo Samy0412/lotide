@@ -1,17 +1,20 @@
+const eqArrays = function (array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 const assertArraysEqual = function (array1, array2) {
   const pass = String.fromCodePoint(0x2705);
   const fail = String.fromCodePoint(0x274c);
-  let value = false;
-  if (array1.length !== array2.length) {
-    value = false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[i]) {
-      value = true;
-    } else {
-      value = false;
-    }
-  }
+
+  const value = eqArrays(array1, array2);
   if (value === true) {
     console.log(
       pass + pass + pass + `Assertion Passed: ${array1} === ${array2}`
