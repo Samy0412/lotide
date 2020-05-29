@@ -45,7 +45,7 @@ const countLetters = function (string) {
 };
 
 //TEST CODE
-result = countLetters("lighthouse in the house");
+let result = countLetters("lighthouse in the house");
 console.log(result);
 assertEqual(result["o"], 2);
 assertEqual(result["g"], 1);
