@@ -1,6 +1,6 @@
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   const result = [];
-  source.forEach(function (i) {
+  source.forEach(function(i) {
     if (!itemsToRemove.includes(i)) {
       result.push(i);
     }

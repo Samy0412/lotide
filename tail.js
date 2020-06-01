@@ -1,6 +1,4 @@
-const assertEqual = require("./assertEqual");
-
-const tail = function (array) {
+const tail = function(array) {
   let tail = [];
   for (let i = 1; i < array.length; i++) {
     tail.push(array[i]);

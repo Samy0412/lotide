@@ -1,0 +1,28 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samy0412/lotide.git"
+  },
+  "author": "Samantha Gadet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samy0412/lotide/issues"
+  },
+  "homepage": "https://github.com/Samy0412/lotide#readme"
+}

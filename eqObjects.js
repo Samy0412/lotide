@@ -28,21 +28,21 @@ const eqObjects = function(object1, object2) {
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 
-//assertEqual(eqObjects(ab, ba), true);
-//console.log(eqObjects(ab, ba));
+assertEqual(eqObjects(ab, ba), true);
+console.log(eqObjects(ab, ba));
 
 const abc = { a: "1", b: "2", c: "3" };
-//assertEqual(eqObjects(ab, abc), false);
+assertEqual(eqObjects(ab, abc), false);
 
-//console.log(eqObjects(ab, abc))
+console.log(eqObjects(ab, abc));
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-//assertEqual(eqObjects(cd, dc), true);
+assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-//assertEqual(eqObjects(cd, cd2), false);
+assertEqual(eqObjects(cd, cd2), false);
 
-//console.log(eqArrays(cd.d, dc.d));
+console.log(eqArrays(cd.d, dc.d));
 
 module.exports = eqObjects;

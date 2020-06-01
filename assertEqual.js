@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   const pass = String.fromCodePoint(0x2705);
   const fail = String.fromCodePoint(0x274c);
   if (actual === expected) {
