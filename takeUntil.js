@@ -1,6 +1,6 @@
 const assertArraysEqual = require("./assertArraysEqual");
 
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   const results = [];
   for (let item of array) {
     //It should keep going until the callback/predicate returns a truthy value.
@@ -34,3 +34,5 @@ assertArraysEqual(
   takeUntil(data2, (x) => x === ","),
   ["I've", "been", "to", "Hollywood"]
 );
+
+module.exports = takeUntil;

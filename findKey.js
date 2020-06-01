@@ -2,7 +2,7 @@ const assertEqual = require("./assertEqual");
 
 // FUNCTION IMPLEMENTATION
 
-const findKey = function(object, callback) {
+const findKey = function (object, callback) {
   //scan the object keys
   for (const key of Object.keys(object)) {
     //check if the callback returns a truthy value
@@ -48,3 +48,5 @@ assertEqual(
   findKey(test2, (x) => x > 6),
   undefined
 );
+
+module.exports = findKey;

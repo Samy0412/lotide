@@ -1,6 +1,6 @@
 const assertEqual = require("./assertEqual");
 
-const findKeyByValue = function(object, value) {
+const findKeyByValue = function (object, value) {
   let result;
   //loop through object keys
   for (const key of Object.keys(object)) {
@@ -23,3 +23,5 @@ console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+module.exports = findKeyByValue;

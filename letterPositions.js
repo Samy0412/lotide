@@ -1,6 +1,6 @@
 const assertArraysEqual = require("./assertArraysEqual");
 
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   const results = {};
   //loop through each letter of the sentence
   for (let i = 0; i < sentence.length; i++) {
@@ -26,3 +26,5 @@ assertArraysEqual(result.h, [0]);
 assertArraysEqual(result.e, [1]);
 assertArraysEqual(result.l, [2, 3]);
 assertArraysEqual(result.o, [4]);
+
+module.exports = letterPositions;

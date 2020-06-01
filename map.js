@@ -4,7 +4,7 @@ const words = ["ground", "control", "to", "major", "tom"];
 
 //MAP FUNCTION
 
-const map = function(array, callback) {
+const map = function (array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -34,3 +34,5 @@ assertArraysEqual(
   map(words, (word) => word.toUpperCase()),
   ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]
 );
+
+module.exports = map;

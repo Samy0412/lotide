@@ -1,6 +1,6 @@
 const assertEqual = require("./assertEqual");
 
-const countLetters = function(string) {
+const countLetters = function (string) {
   const instances = {};
 
   //loop through the entire allItem list
@@ -24,3 +24,5 @@ console.log(result);
 assertEqual(result["o"], 2);
 assertEqual(result["g"], 1);
 assertEqual(result["i"], 2);
+
+module.exports = countLetters;
