@@ -13,9 +13,13 @@ const eqObjects = function(object1, object2) {
     //check if it is an array or not
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       // check if value of each keys are equal
-      if (eqArrays(object1[key], object2[key]) === false) {
+      if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
+      //check if it is an object
+    }else if(Object.prototype.toString.call(object1[key]) === '[object Object]'&& Object.prototype.toString.call(object2[key]) === '[object Object]'){
+      return eqObjects(object1[key],object2[key]);
+
     } else if (object1[key] !== object2[key]) {
       return false;
     }
@@ -45,4 +49,9 @@ assertEqual(eqObjects(cd, cd2), false);
 
 console.log(eqArrays(cd.d, dc.d));
 
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false)
+
+assertEqual(eqObjects({ a: { y: {j: 6, k: 8}, z: 1 }, b: 2 }, { a: { y: { k: 8, j: 6 }, z: 1 }, b: 2 }), true)
+
+assertEqual(eqObjects({ a: { y: {j: 6, k: 8}, z: 1 }, b: 2 }, { a: { y: {j: 6, k: {f:4}}, z: 1 }, b: 2 }), false)
 module.exports = eqObjects;
